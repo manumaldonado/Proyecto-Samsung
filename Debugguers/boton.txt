@@ -1,0 +1,31 @@
+Boton en CSS:
+.boton {
+    position: relative;
+    background:linear-gradient(to right,#4e73c2,#80a9da);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 16px 32px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.boton:hover {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.boton:active{
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+
+
+Boton en HTML:
+    <button class="boton">
+        <span> PUSH ME </span>
+    </button>
