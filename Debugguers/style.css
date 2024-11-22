@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*Vatiables de colores*/
+
+:root {
+    --background-color: rgb(248, 248, 248);
+    --text-title-color: #053D4E;
+    --text-color: #32353B;
+    --icon-color: #32353B;
+    --icon-menu-color: #707780;
+    --menu-color: #707780;
+    --text-selected-color: #707780;
+    --background-selected: #EBF0FF;
+    --background-hover: #EBF0FF;
+    --border-color: #E6E9ED;
+
+   
+    --accent-color: #FF00FF;
+    /* Deep Pink */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    background-color: var(--background-color);
+    top: 0;
+    left: 0;
+}
+
+/*Sección izquierda*/
+.menu-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/*Menu: Contiene los estilos para el boton que despliegua el menu lateral*/
+.menu-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu {
+    width: 1.5rem;
+    height: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu div {
+    width: 100%;
+    height: 0.15rem;
+    background-color: var(--menu-color);
+    transition: all 0.2s ease;
+}
+
+/*Brand: son los estilos del logo y del titulo "the Debugguers"*/
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand .logo {
+    width: 1.7rem;
+}
+
+.brand .name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-title-color);
+}
+
+
+/*Sidebar*/
+
+.sidebar {
+    margin-top: 4rem;
+    width: 4rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1.1rem 0rem;
+    border-right: 1px solid var(--border-color);
+    overflow: auto;
+    background-color: var(--background-color);
+}
+
+/*Este es para que despliegue el menu con un click*/
+.sidebar.menu-toggle {
+    width: 18.75rem;
+}
+
+/*Estilos de los elementos de la barra lateral*/
+.sidebar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.sidebar a:hover {
+    background-color: var(--background-hover);
+}
+
+/*Muchachos, en esta parte se van al html y le agregan la clase de selected a la pestaña en la que vayan a trabajar, yo ahorita que la hice la deje en inicio, pero en la que vayana a trabajar ustedes, le agregan esa clase.*/
+.sidebar a.selected {
+    color: var(--text-selected-color);
+    background-color: var(--background-selected);
+}
+
+.sidebar img {
+    width: 1.6rem;
+    color: var(--icon-menu-color);
+}
+
+/*Main: es donde se va a poner todo el contenido de la pagina.*/
+
+main {
+    margin-top: 4rem;
+    margin-left: 4rem;
+    padding: 2rem;
+    transition: margin-left 0.2s ease;
+}
+
+main.menu-toggle {
+    margin-left: 18.75rem;
+}
+
+/*Resposive de la página*/
+
+@media(max-width:500px) {
+    .sidebar {
+        width: 0;
+    }
+
+    main {
+        margin-left: 0;
+
+    }
+
+    main.menu-toggle {
+        margin-left: 0;
+    }
+}
