@@ -1,4 +1,9 @@
-email,edad,estado,formacion,ocupacion,universidad,periodo_clase,tipo_trabajo,moneda,salario,gastos,rango_vivienda,rango_alimentacion,rango_transporte,act_extracurricular,rango_extracurricular,bool_ahorro,rango_ahorro,educacion_financiera,bool_educacion_financiera,nivel_vida,nivel_complacidad
+email,"¿Cuál es tu edad?
+Si su edad se sale del rango establecido por favor absténgase de responder la encuesta ",estado,formacion,ocupacion,universidad,periodo_clase,tipo_trabajo,moneda,salario,gastos,"Basado en la respuesta anterior ¿Cuál es el rango de tu gasto mensual en VIVIENDA?
+Si no cubres esta necesidad con tus ingresos, seleccionar 0.","¿Cuál es el rango de tu gasto mensual en ALIMENTACIÓN?
+Si no cubres esta necesidad con tus ingresos, seleccionar 0.","¿Cuál es el rango de tu gasto mensual en TRANSPORTE?
+Si no cubres esta necesidad con tus ingresos, seleccionar 0.","¿Costeas actividades extracurriculares?
+Si es así, por favor indicar cuales.",rango_extracurricular,bool_ahorro,rango_ahorro,educacion_financiera,bool_educacion_financiera,nivel_vida,nivel_complacidad
 manuelmaldonado408@gmail.com,18 a 20 años.,Mérida,Bachiller,Estudiante y empleado.,Pública.,Semestre.,"Sector público (gobierno, instituciones públicas).",Bolívares,$240 a $280,"Alimentación, Transporte",$0,$60 a $80,$40 a $60,no tengo actividades extracurriculares,$0,Sí,Más de $80,No,Sí,Mejor.,Neutral.
 camachofloriana28@gmail.com,18 a 20 años.,Mérida,Bachiller,Empleado o emprendedor,No aplica,No aplica,"Trabajador independiente (freelance, emprendedor).",Dólares estadounidenses,$160 a $200.,"Alimentación, Transporte",$0,$20 a $40,$20 a $40,No aplica.,$0,Sí,Más de $80,Sí,Sí,Mucho mejor.,Bastante satisfecho.
 luiscogollom.2004@gmail.com,21 a 23 años.,Mérida,Bachiller,Estudiante y empleado.,Pública.,Semestre.,"Sector privado (empresas, organizaciones no gubernamentales, etc).",Bolívares,$80 a $120.,"Vivienda., Alimentación",$40 a 80$,$20 a $40,$0,No aplica.,$0,No,$0,Sí,Sí,Peor.,Nada satisfecho.
