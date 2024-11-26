@@ -9,6 +9,7 @@
 Este proyecto analiza el poder adquisitivo y los patrones de consumo de los jóvenes venezolanos, utilizando técnicas de análisis de datos y visualización. El objetivo principal es identificar tendencias clave y proporcionar insights basados en datos.
 
 ## Características
+- Implementación en `Python` como lenguaje principal de desarrollo.
 - Procesamiento de datos con `pandas`.
 - Análisis estadístico con `numpy`.
 - Visualización de datos utilizando `matplotlib` y `seaborn`.
