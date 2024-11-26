@@ -111,7 +111,7 @@ header {
 }
 
 /*Este es para que despliegue el menu con un click*/
-.sidebar.menu-toggle {
+.sidebar.menu-toggle{
     width: 18.75rem;
 }
 
@@ -153,10 +153,35 @@ main {
     transition: margin-left 0.2s ease;
 }
 
-main.menu-toggle {
+main.menu-toggle{
     margin-left: 18.75rem;
 }
 
+.Title h1{
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+h2{
+    margin-top: 3rem;
+}
+
+p{ margin-top: 2rem;
+    text-indent: 3em;
+    text-align: justify;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapa img{
+    width: 45%;
+    margin: 3rem 1rem;
+
+}
 /*Resposive de la página*/
 
 @media(max-width:500px) {
