@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Debugguers</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-left">
+        <div class="menu-container">
+          <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="brand">
+          <img src="./icons/icons8-bug-96.png" alt="" class="logo" />
+          <span class="name">The Debugguers</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="selected">
+              <img src="./icons/home.svg" alt="" />
+              <span>Inicio</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="informe.html">
+              <img src="./icons/chart.svg" alt="" />
+              <span>Informe</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="calculadora.html">
+              <img src="./icons/calculadora.svg" alt="" />
+              <span>Calculadora</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+        <div class="calculadora-container">
+          <h2>Calculadora de Reserva Mensual</h2>
+          <p>A continuación calcularemos de forma básica tu reserva mensual, en función de ella sabrás cuanto tiempo (en meses) tardarías en comprar el celular más vendido este año, la laptop más vendida en Amazon y una moto Bera modelo sbr 2024.</p>
+          
+          <br>
+          <hr>
+          <br>
+          <h4><strong>Los valores deben ser ingresados en Dolares Americanos (USD)</strong></h4>
+          <br>
+          <hr>
+          <br>
+
+          <form class="calculadora-form" id="formulario-presupuesto">
+            <label for="ingreso">Ingreso Mensual:</label>
+            <input type="number" id="ingreso" placeholder="Ingresa tu salario mensual">
+      
+            <label for="alimentacion">Gasto en Alimentación:</label>
+            <input type="number" id="alimentacion" placeholder="Ingresa tu gasto en alimentación">
+      
+            <label for="vivienda">Gasto en Vivienda:</label>
+            <input type="number" id="vivienda" placeholder="Ingresa tu gasto en vivienda">
+      
+            <label for="transporte">Gasto en Transporte:</label>
+            <input type="number" id="transporte" placeholder="Ingresa tu gasto en transporte">
+      
+            <label for="ocio">Gasto en Ocio:</label>
+            <input type="number" id="ocio" placeholder="Ingresa tu gasto en ocio">
+
+
+            <div class="nuevo-gasto-container">
+                <h4>Añadir Nuevo Gasto</h4>
+                <label for="nombre-gasto">Nombre del Gasto:</label>
+                <input type="text" id="nombre-gasto" placeholder="Ejemplo: Salud, Educación, etc.">
+
+                <label for="valor-gasto">Valor del Gasto (USD):</label>
+                <input type="number" id="valor-gasto" placeholder="Ingresa el valor del nuevo gasto" min="0">
+
+                <button type="button" id="agregar-gasto-btn">Añadir Gasto</button>
+            </div>
+      
+            <button type="button" id="calcular-btn">Calcular Reserva</button>
+          </form>
+          <div id="resultados" class="resultados-container"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
