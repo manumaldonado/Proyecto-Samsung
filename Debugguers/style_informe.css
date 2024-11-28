@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*Vatiables de colores*/
+
+:root {
+    --background-color: rgb(248, 248, 248);
+    --text-title-color: #053D4E;
+    --text-color: #32353B;
+    --icon-color: #32353B;
+    --icon-menu-color: #707780;
+    --menu-color: #707780;
+    --text-selected-color: #707780;
+    --background-selected: #EBF0FF;
+    --background-hover: #EBF0FF;
+    --border-color: #E6E9ED;
+
+
+    --accent-color: #FF00FF;
+    /* Deep Pink */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    background-color: var(--background-color);
+    top: 0;
+    left: 0;
+}
+
+/*Sección izquierda*/
+.menu-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/*Menu: Contiene los estilos para el boton que despliegua el menu lateral*/
+.menu-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu {
+    width: 1.5rem;
+    height: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu div {
+    width: 100%;
+    height: 0.15rem;
+    background-color: var(--menu-color);
+    transition: all 0.2s ease;
+}
+
+/*Brand: son los estilos del logo y del titulo "the Debugguers"*/
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand .logo {
+    width: 1.7rem;
+}
+
+.brand .name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-title-color);
+}
+
+
+/*Sidebar*/
+
+.sidebar {
+    margin-top: 4rem;
+    width: 4rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1.1rem 0rem;
+    border-right: 1px solid var(--border-color);
+    overflow: auto;
+    background-color: var(--background-color);
+}
+
+/*Este es para que despliegue el menu con un click*/
+.sidebar.menu-toggle {
+    width: 18.75rem;
+}
+
+/*Estilos de los elementos de la barra lateral*/
+.sidebar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.sidebar a:hover {
+    background-color: var(--background-hover);
+}
+
+/*Muchachos, en esta parte se van al html y le agregan la clase de selected a la pestaña en la que vayan a trabajar, yo ahorita que la hice la deje en inicio, pero en la que vayana a trabajar ustedes, le agregan esa clase.*/
+.sidebar a.selected {
+    color: var(--text-selected-color);
+    background-color: var(--background-selected);
+}
+
+.sidebar img {
+    width: 1.6rem;
+    color: var(--icon-menu-color);
+}
+
+/*Main: es donde se va a poner todo el contenido de la pagina.*/
+
+main {
+    margin-top: 4rem;
+    margin-left: 4rem;
+    padding: 2rem;
+    transition: margin-left 0.2s ease;
+}
+
+main.menu-toggle {
+    margin-left: 18.75rem;
+}
+
+.Title h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+h2 {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
+}
+
+h3 {
+    font-size: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
+}
+
+.line {
+    background-color: #053D4E;
+    width: 15rem;
+    height: 0.3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+p {
+    margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    text-indent: 3em;
+    text-align: justify;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa img {
+    width: 45%;
+    margin: 3rem 1rem;
+
+}
+
+.contenedor h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+
+.contenedor {
+    margin-top: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
+}
+
+.contenido-oculto {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+.grafica {
+    display: flex;
+    justify-content: center;
+}
+
+.grafica img {
+    width: 40%;
+    margin: 3rem 1rem;
+}
+
+button {
+    position: relative;
+    background: linear-gradient(to right, #4e73c2, #80a9da);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 8px 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    border-radius: 8px;
+    left: 0;
+
+}
+
+button:hover {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+/*Resposive de la página*/
+
+@media(max-width:500px) {
+    .sidebar {
+        width: 0;
+    }
+
+    main {
+        margin-left: 0;
+
+    }
+
+    main.menu-toggle {
+        margin-left: 0;
+    }
+
+    h2 {
+        margin-left: 1rem;
+        margin-right: 0rem;
+        margin-top: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    .line {
+        background-color: #053D4E;
+        width: 15rem;
+        height: 0.3rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
+    }
+
+    p {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
+        text-indent: 3em;
+        text-align: justify;
+    }
+
+    .mapa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mapa img {
+        width: 50%;
+        margin: 3rem 1rem;
+
+    }
+   
+    .contenedor h3 {
+        font-size: 1.5;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor {
+        margin-top: 3rem;
+        margin-left: 1rem;
+        margin-right: 0;
+
+    }
+
+    .contenido-oculto {
+        display: none;
+        background-color: #f0f0f0;
+        padding: 1px;
+    }
+
+    .grafica {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grafica img {
+        width: 45%;
+        margin: 3rem 1rem;
+    }
+
+    button {
+        position: relative;
+        background: linear-gradient(to right, #4e73c2, #80a9da);
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: block;
+        padding: 8px 15px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        border-radius: 8px;
+        left: 1rem;
+
+    }
+
+    button:hover {
+        transform: translateY(-6px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+    }
+
+    button:active {
+        transform: translateY(-2px);
+        transition: transform 34ms;
+    }
+}
+
+/* Estilos generales de la calculadora */
+.calculadora-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centra la calculadora */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Centra el texto */
+}
+
+.calculadora-container h2 {
+    font-size: 2rem;
+    color: var(--text-title-color);
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los campos de ingreso */
+.calculadora-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.calculadora-form label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.calculadora-form input {
+    width: 100%;
+    max-width: 350px;
+    /* Tamaño máximo de las cajas de texto */
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.calculadora-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Estilo del botón Calcular */
+.calculadora-form button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    /* Tamaño máximo del botón */
+    margin-top: 15px;
+}
+
+.calculadora-form button:hover {
+    background-color: #e600e6;
+}
+
+/* Espaciado de los elementos de la calculadora */
+.calculadora-form input,
+.calculadora-form button {
+    font-size: 1rem;
+}
+
+/* Estilo de los campos de entrada */
+.calculadora-form input {
+    font-size: 1.1rem;
+}
+
+/* Ajustes de pantalla pequeña */
+@media (max-width: 500px) {
+    .calculadora-container {
+        padding: 15px;
+    }
+
+    .calculadora-form input {
+        max-width: 100%;
+    }
+
+    .calculadora-form button {
+        width: 100%;
+    }
+}
+
+/* Contenedor de resultados */
+.resultados-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Estilo para cada sección de resultados */
+.resultados-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.resultados-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los productos y el cálculo */
+.producto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.producto img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.producto .descripcion {
+    font-size: 1rem;
+}
+
+.producto .tiempo {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.producto .precio {
+    font-weight: bold;
+}
+
+/* Estilos para el formulario de nuevo gasto */
+.nuevo-gasto-container {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nuevo-gasto-container input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.nuevo-gasto-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.nuevo-gasto-container button:hover {
+    background-color: #218838;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; 
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Estilo para el main */
+  main#contenido-principal {
+    margin-left: 260px; 
+    padding: 20px;
+    background-color: #ffffff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+  }
+  
+  /* Títulos principales */
+  main#contenido-principal h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50; 
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* Títulos de secciones */
+  main#contenido-principal h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 30px;
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 5px;
+  }
+  
+  /* Subtítulos */
+  main#contenido-principal h3 {
+    font-size: 18px;
+    color: #2980b9; 
+    margin-top: 20px;
+  }
+  
+  /* Párrafos */
+  main#contenido-principal p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: #ecf0f1; 
+    padding: 10px;
+    border-radius: 5px; 
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); 
+    text-indent: 0; 
+  }
+  
+  /* Lista dentro de párrafos */
+  main#contenido-principal p:has(-) {
+    margin-left: 20px;
+  }
+  
