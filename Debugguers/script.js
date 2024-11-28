@@ -46,13 +46,19 @@ document.getElementById('calcular-btn').addEventListener('click', () => {
     imagenDiv.style.textAlign = 'center';
     let mensajeImagen = '';
 
-    if (reservaMensual > 100) {
+    if (reservaMensual > 80) {
         mensajeImagen = '<img src="Img/mucha_plata.png" alt="Alta Reserva" style="width: 200px;">';
-    } else if (reservaMensual >= 50 && reservaMensual <= 80) {
+    } 
+    else if (reservaMensual >= 50 && reservaMensual <= 80) {
         mensajeImagen = '<img src="Img/plata_moderada.png" alt="Reserva Media" style="width: 200px;">';
-    } else if (reservaMensual >= 10 && reservaMensual < 50) {
+    } 
+    else if (reservaMensual >= 20 && reservaMensual < 50) {
         mensajeImagen = '<img src="Img/poca_plata.png" alt="Reserva Baja" style="width: 200px;">';
-    } else if (reservaMensual <= 0) {
+    }
+    else if (reservaMensual >= 1 && reservaMensual < 20) {
+      mensajeImagen = '<img src="Img/sin_plata.png" alt="Sin Reserva" style="width: 200px;">';
+    } 
+     else if (reservaMensual <= 0) {
         mensajeImagen = '<img src="Img/sin_plata.png" alt="Sin Reserva" style="width: 200px;">';
         resultadosDiv.innerHTML = `<p>No es posible ahorrar con los ingresos y gastos ingresados.</p>`;
         resultadosDiv.appendChild(imagenDiv);
