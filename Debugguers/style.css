@@ -164,10 +164,20 @@ main.menu-toggle{
 }
 
 h2{
+    text-indent: 0.5em;
+    font-size: 1.8rem;
     margin-top: 3rem;
 }
 
-p{ margin-top: 2rem;
+.line{
+    width: 17rem;
+    height: 0.2rem;
+    background-color: #053D4E;
+}
+
+p{ 
+    margin-top: 3rem;
+    font-size: 1.3rem;
     text-indent: 3em;
     text-align: justify;
 }
