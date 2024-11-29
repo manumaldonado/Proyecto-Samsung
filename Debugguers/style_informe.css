@@ -373,183 +373,6 @@ button:active {
     }
 }
 
-/* Estilos generales de la calculadora */
-.calculadora-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    /* Centra la calculadora */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    /* Centra el texto */
-}
-
-.calculadora-container h2 {
-    font-size: 2rem;
-    color: var(--text-title-color);
-    margin-bottom: 20px;
-}
-
-/* Contenedor de los campos de ingreso */
-.calculadora-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.calculadora-form label {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 5px;
-}
-
-.calculadora-form input {
-    width: 100%;
-    max-width: 350px;
-    /* Tamaño máximo de las cajas de texto */
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.calculadora-form input:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-/* Estilo del botón Calcular */
-.calculadora-form button {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 200px;
-    /* Tamaño máximo del botón */
-    margin-top: 15px;
-}
-
-.calculadora-form button:hover {
-    background-color: #e600e6;
-}
-
-/* Espaciado de los elementos de la calculadora */
-.calculadora-form input,
-.calculadora-form button {
-    font-size: 1rem;
-}
-
-/* Estilo de los campos de entrada */
-.calculadora-form input {
-    font-size: 1.1rem;
-}
-
-/* Ajustes de pantalla pequeña */
-@media (max-width: 500px) {
-    .calculadora-container {
-        padding: 15px;
-    }
-
-    .calculadora-form input {
-        max-width: 100%;
-    }
-
-    .calculadora-form button {
-        width: 100%;
-    }
-}
-
-/* Contenedor de resultados */
-.resultados-container {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Estilo para cada sección de resultados */
-.resultados-container h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.resultados-container p {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Estilo para los productos y el cálculo */
-.producto {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.producto img {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-}
-
-.producto .descripcion {
-    font-size: 1rem;
-}
-
-.producto .tiempo {
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-.producto .precio {
-    font-weight: bold;
-}
-
-/* Estilos para el formulario de nuevo gasto */
-.nuevo-gasto-container {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.nuevo-gasto-container input {
-    width: 100%;
-    max-width: 350px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.nuevo-gasto-container button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-.nuevo-gasto-container button:hover {
-    background-color: #218838;
-}
 
 /* Estilos generales */
 body {
@@ -612,4 +435,64 @@ body {
   main#contenido-principal p:has(-) {
     margin-left: 20px;
   }
-  
+
+  /* Tablets (pantallas entre 600px y 1024px) */
+@media (max-width: 1024px) {
+    main#contenido-principal {
+        margin-left: 200px;
+        padding: 15px;
+    }
+    main#contenido-principal h1 {
+        font-size: 24px;
+    }
+    main#contenido-principal h2 {
+        font-size: 20px;
+    }
+    main#contenido-principal h3 {
+        font-size: 16px;
+    }
+    main#contenido-principal p {
+        font-size: 14px;
+    }
+}
+
+/* Smartphones grandes (pantallas entre 400px y 600px) */
+@media (max-width: 600px) {
+    main#contenido-principal {
+        margin-left: 0;
+        padding: 10px;
+    }
+    main#contenido-principal h1 {
+        font-size: 20px;
+    }
+    main#contenido-principal h2 {
+        font-size: 18px;
+    }
+    main#contenido-principal h3 {
+        font-size: 14px;
+    }
+    main#contenido-principal p {
+        font-size: 12px;
+    }
+}
+
+/* Smartphones pequeños (pantallas menores de 400px) */
+@media (max-width: 400px) {
+    main#contenido-principal {
+        margin-left: 0;
+        padding: 8px;
+    }
+    main#contenido-principal h1 {
+        font-size: 18px;
+    }
+    main#contenido-principal h2 {
+        font-size: 16px;
+    }
+    main#contenido-principal h3 {
+        font-size: 12px;
+    }
+    main#contenido-principal p {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

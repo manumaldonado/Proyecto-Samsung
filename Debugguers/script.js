@@ -1,26 +1,33 @@
+// Menú lateral y contenido principal
 const menu = document.getElementById('menu');
 const sidebar = document.getElementById('sidebar');
 const main = document.getElementById('main');
 
-
-menu.addEventListener('click',()=>{
+menu.addEventListener('click', () => {
     sidebar.classList.toggle('menu-toggle');
     main.classList.toggle('menu-toggle');
 });
 
+// Botones "Mostrar más"
 const botonesMostrarMas = document.querySelectorAll('.mostrar-mas');
 
 botonesMostrarMas.forEach(boton => {
-  const contenidoOculto = boton.nextElementSibling;
+    const contenidoOculto = boton.nextElementSibling;
 
-  boton.addEventListener('click', () => {
-    if (contenidoOculto.style.display === "none") {
-      contenidoOculto.style.display = "block";
-    } else {
-      contenidoOculto.style.display = "none";
-    }
-  });
+    boton.addEventListener('click', () => {
+        contenidoOculto.classList.toggle('visible');
+    });
 });
+
+// CSS dinámico para clase .visible
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        .contenido-oculto.visible {
+            display: block !important;
+        }
+    </style>
+`);
+
 
 // Acumulador para los gastos adicionales
 let gastosAdicionales = 0;
